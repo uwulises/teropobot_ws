@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/uwulises/teropobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/uwulises/teropobot_ws/install -G Unix Makefiles

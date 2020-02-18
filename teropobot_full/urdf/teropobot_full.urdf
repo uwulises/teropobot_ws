@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="teropobot_full">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.045878 -0.0040368 0.047751"
+        rpy="0 0 0" />
+      <mass
+        value="1.2959" />
+      <inertia
+        ixx="0.00096609"
+        ixy="-3.6548E-10"
+        ixz="0.00099971"
+        iyy="0.016362"
+        iyz="1.5945E-11"
+        izz="0.01566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/base_link.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79608 0.82353 0.93725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/base_link.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="r_1">
+    <inertial>
+      <origin
+        xyz="-6.3965E-09 -0.00028484 -0.048997"
+        rpy="0 0 0" />
+      <mass
+        value="0.248" />
+      <inertia
+        ixx="0.00010121"
+        ixy="-2.732E-11"
+        ixz="3.8509E-11"
+        iyy="8.3656E-05"
+        iyz="-2.4257E-06"
+        izz="5.2094E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_1.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_1.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_j1"
+    type="fixed">
+    <origin
+      xyz="0.056905 -0.064 0.084748"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="r_2">
+    <inertial>
+      <origin
+        xyz="-0.028 1.2137E-08 -0.0625"
+        rpy="0 0 0" />
+      <mass
+        value="0.015645" />
+      <inertia
+        ixx="2.7609E-05"
+        ixy="2.9809E-21"
+        ixz="3.9426E-19"
+        iyy="2.6594E-05"
+        iyz="9.0068E-20"
+        izz="1.0253E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_2.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078 0.96078 0.96471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_2.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_j2"
+    type="revolute">
+    <origin
+      xyz="0 -0.028 -0.069"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="r_1" />
+    <child
+      link="r_2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_3">
+    <inertial>
+      <origin
+        xyz="-0.027663 -4.7622E-08 -0.0595"
+        rpy="0 0 0" />
+      <mass
+        value="0.41969" />
+      <inertia
+        ixx="0.00017258"
+        ixy="-3.0029E-20"
+        ixz="-1.1283E-20"
+        iyy="0.0001918"
+        iyz="7.7018E-11"
+        izz="9.812E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_3.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_3.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_j3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.125"
+      rpy="0 0 0" />
+    <parent
+      link="r_2" />
+    <child
+      link="r_3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_4">
+    <inertial>
+      <origin
+        xyz="-0.028125 -7.4241E-09 -0.069425"
+        rpy="0 0 0" />
+      <mass
+        value="0.21367" />
+      <inertia
+        ixx="7.1237E-05"
+        ixy="2.7318E-11"
+        ixz="2.4257E-06"
+        iyy="8.9539E-05"
+        iyz="3.8509E-11"
+        izz="5.4576E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_4.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_4.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_j4"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.119"
+      rpy="0 0 0" />
+    <parent
+      link="r_3" />
+    <child
+      link="r_4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_5">
+    <inertial>
+      <origin
+        xyz="-0.0283 0.036539 -0.010779"
+        rpy="0 0 0" />
+      <mass
+        value="0.077884" />
+      <inertia
+        ixx="3.4943E-05"
+        ixy="8.0794E-11"
+        ixz="4.2865E-11"
+        iyy="6.0582E-05"
+        iyz="1.2752E-06"
+        izz="8.9171E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_5.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/r_5.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_j5"
+    type="revolute">
+    <origin
+      xyz="-0.0005 0 -0.0888"
+      rpy="0 0 0" />
+    <parent
+      link="r_4" />
+    <child
+      link="r_5" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_1">
+    <inertial>
+      <origin
+        xyz="-6.3965E-09 -0.00028484 -0.048997"
+        rpy="0 0 0" />
+      <mass
+        value="0.248" />
+      <inertia
+        ixx="0.00010121"
+        ixy="-2.732E-11"
+        ixz="3.8509E-11"
+        iyy="8.3656E-05"
+        iyz="-2.4257E-06"
+        izz="5.2094E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_1.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_1.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_j1"
+    type="fixed">
+    <origin
+      xyz="0.056905 0.0558 0.084349"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l_2">
+    <inertial>
+      <origin
+        xyz="-0.028 1.2137E-08 -0.0625"
+        rpy="0 0 0" />
+      <mass
+        value="0.015645" />
+      <inertia
+        ixx="2.7609E-05"
+        ixy="2.7089E-21"
+        ixz="3.9651E-19"
+        iyy="2.6594E-05"
+        iyz="3.5749E-19"
+        izz="1.0253E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_2.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078 0.96078 0.96471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_2.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_j2"
+    type="revolute">
+    <origin
+      xyz="0 -0.028 -0.069"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="l_1" />
+    <child
+      link="l_2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_3">
+    <inertial>
+      <origin
+        xyz="-0.027663 -4.7622E-08 -0.0595"
+        rpy="0 0 0" />
+      <mass
+        value="0.41969" />
+      <inertia
+        ixx="0.00017258"
+        ixy="-6.9626E-20"
+        ixz="2.442E-20"
+        iyy="0.0001918"
+        iyz="7.7018E-11"
+        izz="9.812E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_3.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_3.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_j3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.125"
+      rpy="0 0 0" />
+    <parent
+      link="l_2" />
+    <child
+      link="l_3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_4">
+    <inertial>
+      <origin
+        xyz="-0.14792 -7.4241E-09 -0.069824"
+        rpy="0 0 0" />
+      <mass
+        value="0.21367" />
+      <inertia
+        ixx="7.1237E-05"
+        ixy="2.7318E-11"
+        ixz="2.4257E-06"
+        iyy="8.9539E-05"
+        iyz="3.8509E-11"
+        izz="5.4576E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_4.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_4.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_j4"
+    type="revolute">
+    <origin
+      xyz="0.1198 0 -0.1186"
+      rpy="0 0 0" />
+    <parent
+      link="l_3" />
+    <child
+      link="l_4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_5">
+    <inertial>
+      <origin
+        xyz="-0.0283 0.036539 -0.010779"
+        rpy="0 0 0" />
+      <mass
+        value="0.077884" />
+      <inertia
+        ixx="3.4943E-05"
+        ixy="8.0794E-11"
+        ixz="4.2865E-11"
+        iyy="6.0582E-05"
+        iyz="1.2752E-06"
+        izz="8.9171E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_5.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/l_5.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_j5"
+    type="revolute">
+    <origin
+      xyz="-0.1203 0 -0.089199"
+      rpy="0 0 0" />
+    <parent
+      link="l_4" />
+    <child
+      link="l_5" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="s_0">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/s_0.StL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/s_0.StL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="s_j0"
+    type="prismatic">
+    <origin
+      xyz="0.1635 0.0195 0.068455"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="s_0" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
