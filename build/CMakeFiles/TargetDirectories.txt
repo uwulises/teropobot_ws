@@ -35,3 +35,11 @@
 /home/uwulises/teropobot_ws/build/gtest/googlemock/gtest/CMakeFiles/list_install_components.dir
 /home/uwulises/teropobot_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir
 /home/uwulises/teropobot_ws/build/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/install/strip.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/install/local.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/test.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/list_install_components.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/edit_cache.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/_catkin_empty_exported_target.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/rebuild_cache.dir
+/home/uwulises/teropobot_ws/build/teropobot_full/CMakeFiles/install.dir

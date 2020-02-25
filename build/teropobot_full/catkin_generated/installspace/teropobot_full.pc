@@ -1,0 +1,8 @@
+prefix=/home/uwulises/teropobot_ws/install
+
+Name: teropobot_full
+Description: Description of teropobot_full
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
