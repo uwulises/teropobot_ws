@@ -20,5 +20,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find teropobot_full)/urdf.rviz" />
+    args="-d $(find teropobot_full)/config/urdf.rviz" />
 </launch>

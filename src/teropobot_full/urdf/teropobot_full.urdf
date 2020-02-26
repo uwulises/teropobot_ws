@@ -31,7 +31,7 @@
       <material
         name="">
         <color
-          rgba="1 1 1 0.85" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -62,7 +62,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.08 0.064 -0.145"
+        xyz="-0.079 0.064 -0.145"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -76,7 +76,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.08 0.064 -0.145"
+        xyz="-0.079 0.064 -0.145"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -86,7 +86,7 @@
   </link>
   <joint
     name="r_j1"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0.078905 -0.064 0.14462"
       rpy="0 0 0" />
@@ -97,10 +97,10 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-0.2"
+      upper="0.11"
+      effort="100"
+      velocity="10" />
   </joint>
   <link
     name="r_2">
@@ -120,7 +120,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.06 0.09 -0.08"
+        xyz="-0.057 0.092 -0.076"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -134,7 +134,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.06 0.09 0"
+        xyz="-0.057 0.092 -0.076"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -144,7 +144,7 @@
   </link>
   <joint
     name="r_j2"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="-0.022 -0.028 -0.069"
       rpy="0 0 0" />
@@ -155,10 +155,10 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
   </joint>
   <link
     name="r_3">
@@ -178,7 +178,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.08 0.064 0.05"
+        xyz="-0.057 0.092 0.0495"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -192,7 +192,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.08 0.064 0.05"
+        xyz="-0.057 0.092 0.0495"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -202,7 +202,7 @@
   </link>
   <joint
     name="r_j3"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0 0 -0.125"
       rpy="0 0 0" />
@@ -213,10 +213,10 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-1.57"
+      upper="0.2"
+      effort="100"
+      velocity="10" />
   </joint>
   <link
     name="r_4">
@@ -236,7 +236,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.08 0.064 0.15"
+        xyz="-0.057 0.092 0.1685"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -250,7 +250,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.08 0.064 0.15"
+        xyz="-0.057 0.092 0.1685"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -260,7 +260,7 @@
   </link>
   <joint
     name="r_j4"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0 0 -0.119"
       rpy="0 0 0" />
@@ -271,10 +271,10 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-1.57"
+      upper="0.64"
+      effort="100"
+      velocity="10" />
   </joint>
   <link
     name="r_5">
@@ -294,7 +294,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.08 0.064 0.24"
+        xyz="-0.057 0.0925 0.257"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -308,7 +308,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.08 0.064 0.24"
+        xyz="-0.057 0.0925 0.257"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -318,7 +318,7 @@
   </link>
   <joint
     name="r_j5"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="0 0 -0.0888"
       rpy="0 0 0" />
@@ -329,10 +329,10 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0"
-      effort="0"
-      velocity="0" />
+      lower="-0.5"
+      upper="1"
+      effort="100"
+      velocity="10" />
   </joint>
   <link
     name="s_0">
@@ -352,7 +352,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 0.003"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -361,12 +361,12 @@
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.9 1 1 1" />
       </material>
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 0.003"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -387,9 +387,9 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="0.1"
-      upper="-0.1"
-      effort="0"
-      velocity="0" />
+      lower="-0.1"
+      upper="0.1"
+      effort="10"
+      velocity="10" />
   </joint>
 </robot>
