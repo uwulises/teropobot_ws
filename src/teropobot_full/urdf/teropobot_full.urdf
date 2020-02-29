@@ -62,7 +62,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.079 0.064 -0.145"
+        xyz="-0.079 0.064 -0.1385"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -76,7 +76,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.079 0.064 -0.145"
+        xyz="-0.079 0.064 -0.1385"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -88,7 +88,7 @@
     name="r_j1"
     type="revolute">
     <origin
-      xyz="0.078905 -0.064 0.14462"
+      xyz="0.078905 -0.064 0.13862"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -120,7 +120,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.057 0.092 -0.076"
+        xyz="-0.061 0.092 -0.1055"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -129,12 +129,12 @@
       <material
         name="">
         <color
-          rgba="0.7 0.7 0.7 1" />
+          rgba="0.2 0.2 0.2 1" />
       </material>
     </visual>
     <collision>
       <origin
-        xyz="-0.057 0.092 -0.076"
+        xyz="-0.061 0.092 -0.1055"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -146,7 +146,7 @@
     name="r_j2"
     type="revolute">
     <origin
-      xyz="-0.022 -0.028 -0.069"
+      xyz="-0.018 -0.028 -0.033"
       rpy="0 0 0" />
     <parent
       link="r_1" />
@@ -178,7 +178,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.057 0.092 0.0495"
+        xyz="-0.061 0.092 0.0195"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -192,7 +192,7 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.057 0.092 0.0495"
+        xyz="-0.061 0.092 0.0195"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -236,7 +236,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.057 0.092 0.1685"
+        xyz="-0.061 0.092 0.1385"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -294,7 +294,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.057 0.0925 0.257"
+        xyz="-0.061 0.0925 0.227"
         rpy="0 0 0" />
       <geometry>
         <mesh
