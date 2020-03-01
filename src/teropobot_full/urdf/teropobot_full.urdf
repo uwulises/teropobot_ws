@@ -211,8 +211,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-1.57"
-      upper="0.2"
+      lower="-0.2"
+      upper="1.57"
       effort="100"
       velocity="10" />
   </joint>
@@ -350,11 +350,11 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0.003"
+        xyz="0 -0.023 0.00"
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://teropobot_full/meshes/s_0.stl" />
+          filename="package://teropobot_full/meshes/s_0_v4.stl" />
       </geometry>
       <material
         name="">
@@ -364,11 +364,11 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0.003"
+        xyz="0 -0.023 0.00"
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://teropobot_full/meshes/s_0.stl" />
+          filename="package://teropobot_full/meshes/s_0_v4.stl" />
       </geometry>
     </collision>
   </link>
@@ -376,7 +376,7 @@
     name="s_j0"
     type="prismatic">
     <origin
-      xyz="0.1634 0.0195 0.118455"
+      xyz="0.1634 0.0195 0.122"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -559,8 +559,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="-1.57"
-      upper="0.2"
+      lower="-0.2"
+      upper="1.57"
       effort="100"
       velocity="10" />
   </joint>
