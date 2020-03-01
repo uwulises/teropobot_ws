@@ -43,6 +43,64 @@
     </collision>
   </link>
   <link
+    name="s_0">
+    <inertial>
+      <origin
+        xyz="-0.021524149927319 -0.0265338780334946 0.0230978429274059"
+        rpy="0 0 0" />
+      <mass
+        value="0.187634452845745" />
+      <inertia
+        ixx="3.29205933630442E-05"
+        ixy="-6.9557189946925E-17"
+        ixz="3.53060374200377E-10"
+        iyy="0.00107682704483616"
+        iyz="-1.07029400464651E-06"
+        izz="0.00108318872584713" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.023 0.00"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/s_0_v4.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 -0.023 0.00"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://teropobot_full/meshes/s_0_v4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="s_j0"
+    type="prismatic">
+    <origin
+      xyz="0.1634 0.0195 0.122"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="s_0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.06"
+      upper="0.02"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
     name="r_1">
     <inertial>
       <origin
@@ -332,64 +390,7 @@
       effort="100"
       velocity="10" />
   </joint>
-  <link
-    name="s_0">
-    <inertial>
-      <origin
-        xyz="-0.021524149927319 -0.0265338780334946 0.0230978429274059"
-        rpy="0 0 0" />
-      <mass
-        value="0.187634452845745" />
-      <inertia
-        ixx="3.29205933630442E-05"
-        ixy="-6.9557189946925E-17"
-        ixz="3.53060374200377E-10"
-        iyy="0.00107682704483616"
-        iyz="-1.07029400464651E-06"
-        izz="0.00108318872584713" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 -0.023 0.00"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://teropobot_full/meshes/s_0_v4.stl" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.9 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 -0.023 0.00"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://teropobot_full/meshes/s_0_v4.stl" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="s_j0"
-    type="prismatic">
-    <origin
-      xyz="0.1634 0.0195 0.122"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="s_0" />
-    <axis
-      xyz="1 0 0" />
-    <limit
-      lower="-0.1"
-      upper="0.1"
-      effort="10"
-      velocity="10" />
-  </joint>
+
     <link
     name="l_1">
     <inertial>
