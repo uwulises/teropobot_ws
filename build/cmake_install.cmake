@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/uwulises/teropobot_ws/build/gtest/cmake_install.cmake")
+  include("/home/uwulises/teropobot_ws/build/dynamixel_tutorial/cmake_install.cmake")
   include("/home/uwulises/teropobot_ws/build/teropobot_full/cmake_install.cmake")
 
 endif()
