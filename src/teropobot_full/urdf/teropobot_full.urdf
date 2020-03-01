@@ -64,7 +64,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://teropobot_full/meshes/s_0_v4.stl" />
+          filename="package://teropobot_full/meshes/s_0.stl" />
       </geometry>
       <material
         name="">
@@ -78,7 +78,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://teropobot_full/meshes/s_0_v4.stl" />
+          filename="package://teropobot_full/meshes/s_0.stl" />
       </geometry>
     </collision>
   </link>
