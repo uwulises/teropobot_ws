@@ -1,20 +1,45 @@
 <launch>
-  <include
-    file="$(find gazebo_ros)/launch/empty_world.launch" />
-  <node
-    name="tf_footprint_base"
-    pkg="tf"
-    type="static_transform_publisher"
-    args="0 0 0 0 0 0 base_link base_footprint 40" />
-  <node
-    name="spawn_model"
-    pkg="gazebo_ros"
-    type="spawn_model"
-    args="-file $(find teropobot_full)/urdf/teropobot_full.urdf -urdf -model teropobot_full"
-    output="screen" />
-  <node
-    name="fake_joint_calibration"
-    pkg="rostopic"
-    type="rostopic"
-    args="pub /calibrated std_msgs/Bool true" />
+
+  <!-- - - - - - - -  REAL Parameters - - - - - - - -->
+
+  <!-- Gazebo GUI -->
+  <arg name="gui" default="true"/>
+
+  <!-- RQT GUI for control base and arms -->
+  <arg name="rqt_gui" default="false" />
+
+  <!-- Map -->
+  <arg name="worldname" default="empty" />
+
+  <!-- Grossisaurio model type -->
+  <arg default="$(find teropobot_full)/urdf/teropobot_full.urdf" name="model" />
+
+  <!-- - - - - - - -  USEFUL Parameters - - - - - - - -->
+
+  <!-- Publish /clock -->
+  <arg name="use_sim_time" value="true"/>
+
+  <!-- Prefix for link and Gazebo sensor topics -->
+  <!-- ros_control doesnt support! @TODO -->
+  <arg name="prefix" default="/" />
+
+
+  <!-- Use simulation time -->
+  <param name="use_sim_time" value="$(arg use_sim_time)" />
+  <param command="$(find xacro)/xacro $(arg model)" name="robot_description" />
+  <!-- Launch Gazebo with empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+  
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+        args="-z 1.5 -unpause -urdf -model robot -param robot_description" respawn="false" output="screen" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher"  name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+    <param name="use_tf_static" type="bool" value="true" />
+  </node>
+  
 </launch>
