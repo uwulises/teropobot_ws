@@ -1,1 +1,1 @@
-controller_joint_names: ['', 'r_j1', 'r_j2', 'r_j3', 'r_j4', 'r_j5', 'l_j1', 'l_j2', 'l_j3', 'l_j4', 'l_j5', 's_j0', ]
+controller_joint_names: ['', 'r_hip_pitch_joint', 'r_hip_roll_joint', 'r_knee_joint', 'r_ankle_joint', 'r_phalanges_joint','l_hip_pitch_joint', 'l_hip_roll_joint', 'l_tibia_joint', 'l_ankle_joint', 'l_phalanges_joint', 'h_bobbing_joint', ]
