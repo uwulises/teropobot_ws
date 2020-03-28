@@ -49,7 +49,7 @@
     </collision>
   </link>
   <link
-    name="s_0">
+    name="head_link">
     <inertial>
       <origin
         xyz="-0.021524149927319 -0.0265338780334946 0.0230978429274059"
@@ -89,7 +89,7 @@
     </collision>
   </link>
   <joint
-    name="s_j0"
+    name="h_bobbing_joint"
     type="prismatic">
     <origin
       xyz="0.1634 0.0195 0.122"
@@ -97,7 +97,7 @@
     <parent
       link="base_link" />
     <child
-      link="s_0" />
+      link="head_link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -107,7 +107,7 @@
       velocity="10" />
   </joint>
   <link
-    name="r_1">
+    name="r_hip_link">
     <inertial>
       <origin
         xyz="-0.0220000063965398 -0.0002848394407447 -0.0489971782635417"
@@ -147,7 +147,7 @@
     </collision>
   </link>
   <joint
-    name="r_j1"
+    name="r_hip_pitch_joint"
     type="revolute">
     <origin
       xyz="0.078905 -0.064 0.13862"
@@ -155,7 +155,7 @@
     <parent
       link="base_link" />
     <child
-      link="r_1" />
+      link="r_hip_link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -165,7 +165,7 @@
       velocity="10" />
   </joint>
   <link
-    name="r_2">
+    name="r_femur_link">
     <inertial>
       <origin
         xyz="-1.21365923977379E-08 0.028 -0.0625000000000697"
@@ -205,15 +205,15 @@
     </collision>
   </link>
   <joint
-    name="r_j2"
+    name="r_hip_roll_joint"
     type="revolute">
     <origin
       xyz="-0.018 -0.028 -0.033"
       rpy="0 0 0" />
     <parent
-      link="r_1" />
+      link="r_hip_link" />
     <child
-      link="r_2" />
+      link="r_femur_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -223,7 +223,7 @@
       velocity="10" />
   </joint>
   <link
-    name="r_3">
+    name="r_tibia_link">
     <inertial>
       <origin
         xyz="-4.76214996325552E-08 0.0276633766737961 -0.0595000000000009"
@@ -263,15 +263,15 @@
     </collision>
   </link>
   <joint
-    name="r_j3"
+    name="r_knee_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.125"
       rpy="0 0 0" />
     <parent
-      link="r_2" />
+      link="r_femur_link" />
     <child
-      link="r_3" />
+      link="r_tibia_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -281,7 +281,7 @@
       velocity="10" />
   </joint>
   <link
-    name="r_4">
+    name="r_metatarsals_link">
     <inertial>
       <origin
         xyz="7.32872484920932E-09 0.0278766423184327 -0.0690622085159465"
@@ -321,15 +321,15 @@
     </collision>
   </link>
   <joint
-    name="r_j4"
+    name="r_ankle_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.119"
       rpy="0 0 0" />
     <parent
-      link="r_3" />
+      link="r_tibia_link" />
     <child
-      link="r_4" />
+      link="r_metatarsals_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -339,7 +339,7 @@
       velocity="10" />
   </joint>
   <link
-    name="r_5">
+    name="r_phalanges_link">
     <inertial>
       <origin
         xyz="0.0272000605607781 -0.0101407612836425 0.0367210679469446"
@@ -379,15 +379,15 @@
     </collision>
   </link>
   <joint
-    name="r_j5"
+    name="r_phalanges_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.0888"
       rpy="0 0 0" />
     <parent
-      link="r_4" />
+      link="r_metatarsals_link" />
     <child
-      link="r_5" />
+      link="r_phalanges_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -398,7 +398,7 @@
   </joint>
 
     <link
-    name="l_1">
+    name="l_hip_link">
     <inertial>
       <origin
         xyz="-0.0220000063965398 -0.0002848394407447 -0.0489971782635417"
@@ -438,7 +438,7 @@
     </collision>
   </link>
   <joint
-    name="l_j1"
+    name="l_hip_pitch_joint"
     type="revolute">
     <origin
       xyz="0.078905 0.056 0.13862"
@@ -446,7 +446,7 @@
     <parent
       link="base_link" />
     <child
-      link="l_1" />
+      link="l_hip_link" />
     <axis
       xyz="1 0 0" />
     <limit
@@ -456,7 +456,7 @@
       velocity="10" />
   </joint>
   <link
-    name="l_2">
+    name="l_femur_link">
     <inertial>
       <origin
         xyz="-1.21365923977379E-08 0.028 -0.0625000000000697"
@@ -496,15 +496,15 @@
     </collision>
   </link>
   <joint
-    name="l_j2"
+    name="l_hip_roll_joint"
     type="revolute">
     <origin
       xyz="-0.018 -0.028 -0.033"
       rpy="0 0 0" />
     <parent
-      link="l_1" />
+      link="l_hip_link" />
     <child
-      link="l_2" />
+      link="l_femur_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -514,7 +514,7 @@
       velocity="10" />
   </joint>
     <link
-    name="l_3">
+    name="l_tibia_link">
     <inertial>
       <origin
         xyz="-4.76214996325552E-08 0.0276633766737961 -0.0595000000000009"
@@ -554,15 +554,15 @@
     </collision>
   </link>
   <joint
-    name="l_j3"
+    name="l_knee_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.125"
       rpy="0 0 0" />
     <parent
-      link="l_2" />
+      link="l_femur_link" />
     <child
-      link="l_3" />
+      link="l_tibia_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -572,7 +572,7 @@
       velocity="10" />
   </joint>
     <link
-    name="l_4">
+    name="l_metatarsals_link">
     <inertial>
       <origin
         xyz="7.32872484920932E-09 0.0278766423184327 -0.0690622085159465"
@@ -612,15 +612,15 @@
     </collision>
   </link>
   <joint
-    name="l_j4"
+    name="l_ankle_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.119"
       rpy="0 0 0" />
     <parent
-      link="l_3" />
+      link="l_tibia_link" />
     <child
-      link="l_4" />
+      link="l_metatarsals_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -630,7 +630,7 @@
       velocity="10" />
   </joint>
   <link
-    name="l_5">
+    name="l_phalanges_link">
     <inertial>
       <origin
         xyz="0.0272000605607781 -0.0101407612836425 0.0367210679469446"
@@ -670,15 +670,15 @@
     </collision>
   </link>
   <joint
-    name="l_j5"
+    name="l_phalanges_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.0888"
       rpy="0 0 0" />
     <parent
-      link="l_4" />
+      link="l_metatarsals_link" />
     <child
-      link="l_5" />
+      link="l_phalanges_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -687,4 +687,26 @@
       effort="100"
       velocity="10" />
   </joint>
+
+  <!-- Transmissions -->
+  <transmission name="l_hip_pitch_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_pelvis_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="l_hip_pitch_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+
+
+
+
+
+
+
+
 </robot>
