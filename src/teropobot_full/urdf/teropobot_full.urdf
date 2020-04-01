@@ -8,6 +8,133 @@
   </plugin>
   </gazebo>
 
+  <!-- Transmissions Head Bobbing-->
+  <transmission name="h_bobbing_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="h_bobbing_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="h_bobbing_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+<!-- L LEG -->
+
+  <transmission name="l_hip_pitch_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_pelvis_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="l_hip_pitch_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="l_hip_roll_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_roll_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="l_hip_roll_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l_knee_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_knee_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="l_knee_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l_ankle_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_ankle_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="l_ankle_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="l_phalanges_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_phalanges_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="l_phalanges_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+<!-- R LEG -->
+
+  <transmission name="r_hip_pitch_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_pitch_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="r_hip_pitch_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="r_hip_roll_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_roll_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="r_hip_roll_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="r_knee_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_knee_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="r_knee_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="r_ankle_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_ankle_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="r_ankle_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="r_phalanges_joint_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_phalanges_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint> 
+    <actuator name="r_phalanges_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+
   <link
     name="base_link">
     <inertial>
@@ -687,26 +814,4 @@
       effort="100"
       velocity="10" />
   </joint>
-
-  <!-- Transmissions -->
-  <transmission name="l_hip_pitch_joint_transmission">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="l_pelvis_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-    </joint> 
-    <actuator name="l_hip_pitch_joint_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
-
-
-
-
-
-
-
-
-
 </robot>
