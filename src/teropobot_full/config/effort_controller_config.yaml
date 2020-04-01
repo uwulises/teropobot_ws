@@ -1,0 +1,65 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+h_hobbing_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: h_bobbing_joint
+    pid: {p: 53000, i: 390, d: 10.0}
+
+# Left leg controller
+
+l_hip_roll_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_thigh_pitch_joint
+    pid: {p: 53000, i: 390, d: 10.0}
+
+l_hip_pitch_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_thigh_pitch_joint
+    pid: {p: 53000, i: 390, d: 10.0}
+
+l_knee_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_tibia_joint
+    pid: {p: 46000.0, i: 0.1, d: 10.0}
+
+l_ankle_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_ankle_joint
+    pid: {p: 26000.0, i: 120, d: 120}
+
+l_phalanges_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_phalanges_joint
+    pid: {p: 200, i: 200, d: 0}
+
+r_hip_roll_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_hip_roll_joint
+    pid: {p: 53000, i: 390, d: 10.0}
+
+r_hip_pitch_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_hip_pitch_joint
+    pid: {p: 53000, i: 390, d: 10.0}
+
+r_knee_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_knee_joint
+    pid: {p: 46000.0, i: 0.1, d: 10.0}
+
+r_ankle_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_ankle_joint
+    pid: {p: 26000.0, i: 120, d: 120}
+
+r_phalanges_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_phalanges_joint
+    pid: {p: 200, i: 200, d: 0}
+
+
+#  state_publish_rate:  25            # Override default
+#  action_monitor_rate: 30            # Override default
+#  stop_trajectory_duration: 0        # Override default
