@@ -24,7 +24,7 @@
 
   <transmission name="l_hip_pitch_joint_transmission">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="l_pelvis_joint">
+    <joint name="l_hip_pitch_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint> 
     <actuator name="l_hip_pitch_joint_motor">
@@ -34,7 +34,7 @@
   </transmission>
   <transmission name="l_hip_roll_joint_transmission">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="r_hip_roll_joint">
+    <joint name="l_hip_roll_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint> 
     <actuator name="l_hip_roll_joint_motor">
@@ -469,8 +469,8 @@
     name="r_phalanges_link">
     <inertial>
       <origin
-        xyz="0.0272000605607781 -0.0101407612836425 0.0367210679469446"
-        rpy="0 0 0" />
+        xyz="0.0272000605607781 0.025 0"
+        rpy="-1.57 0 0" />
       <mass
         value="0.0778843023583795" />
       <inertia
@@ -760,8 +760,8 @@
     name="l_phalanges_link">
     <inertial>
       <origin
-        xyz="0.0272000605607781 -0.0101407612836425 0.0367210679469446"
-        rpy="0 0 0" />
+        xyz="0.0272000605607781 0.025 0"
+        rpy="-1.57 0 0" />
       <mass
         value="0.0778843023583795" />
       <inertia
@@ -775,7 +775,7 @@
     <visual>
       <origin
         xyz="-0.061 0.0925 0.227"
-        rpy="0 0 0" />
+        rpy="-0 0 0" />
       <geometry>
         <mesh
           filename="package://teropobot_full/meshes/l_5.stl" />
