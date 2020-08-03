@@ -6,7 +6,7 @@
   <arg name="gui" default="true"/>
 
   <!-- RQT GUI for control base and arms -->
-  <arg name="rqt_gui" default="false" />
+  <arg name="rqt_gui" default="true" />
 
   <!-- Map -->
   <arg name="worldname" default="empty" />
@@ -35,11 +35,12 @@
   
 
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-        args="-z 1.5 -unpause -urdf -model robot -param robot_description" respawn="false" output="screen" />
+        args="-z 0.5  -unpause -urdf -model robot -param robot_description" respawn="false" output="screen" />
 
-  <node pkg="robot_state_publisher" type="robot_state_publisher"  name="robot_state_publisher">
+  <node pkg="robot_state_publisher" type="robot_state_publisher"  name="robot_state_publisher" output="screen">
     <param name="publish_frequency" type="double" value="30.0" />
     <param name="use_tf_static" type="bool" value="true" />
   </node>
+
   
 </launch>
